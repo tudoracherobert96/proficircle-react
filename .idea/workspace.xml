@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0251068f-fd0c-4193-ad13-30ca6df4b7e0" name="Default Changelist" comment="Profi first comm">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/profi-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/proficircle-react.iml" afterDir="false" />
+    <list default="true" id="0251068f-fd0c-4193-ad13-30ca6df4b7e0" name="Default Changelist" comment="ProfiCircle first commit">
+      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ContextApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ControlledInputs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/IntTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PropDrilling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ShowHideComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/TernaryOperator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UseRef.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/listItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,17 +89,37 @@
       <option name="presentableId" value="Default" />
       <updated>1609767811849</updated>
       <workItem from="1609767813812" duration="26638000" />
-      <workItem from="1610002520015" duration="125000" />
+      <workItem from="1610002520015" duration="412000" />
     </task>
+    <task id="LOCAL-00001" summary="ProfiCircle first commit">
+      <created>1610002706045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610002706045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ProfiCircle first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProfiCircle first commit" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1610002568099">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1610002792138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040/-1680.32.1680.1010@0.0.1920.1040" timestamp="1610002568099" />
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040/-1680.32.1680.1010@0.0.1920.1040" timestamp="1610002792138" />
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1610002915778">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/-1680.32.1680.1010@0.0.1920.1040" timestamp="1610002915778" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1610002807857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.32.1680.1010@0.0.1920.1040" timestamp="1610002807857" />
   </component>
 </project>
