@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Home from './Home';
@@ -8,8 +8,11 @@ import Error from './Error';
 import Person from './Person';
 
 import Navbar from './Navbar';
+import {data} from './../../data'
 
 const ReactRouterSetup = () => {
+    const [people,setPeople] = useState(data);
+
     return (
         <Router>
             <Navbar/>
@@ -21,10 +24,10 @@ const ReactRouterSetup = () => {
                     <About />
                 </Route>
                 <Route path="/people">
-                    <People />
+                    <People data={people} />
                 </Route>
                 <Route path="/person/:id">
-                    <Person/>
+                    <Person data={people} onChangePeople={(newPeople) => setPeople(newPeople)}/>
                 </Route>
                 <Route path="*">
                     <Error />
