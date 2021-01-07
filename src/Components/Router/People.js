@@ -12,6 +12,7 @@ const People = () => {
                     return(
                         <div key={person.id} className="item">
                             <Link to={"/person/" + person.id}>{person.name}</Link>
+                            <h2>test</h2>
                         </div>
                     )
                 })
