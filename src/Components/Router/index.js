@@ -6,12 +6,20 @@ import About from './About';
 import People from './People';
 import Error from './Error';
 import Person from './Person';
+import Jobs from './Jobs';
+import Job from './Job';
+import CitiesList from './CitiesList';
 
 import Navbar from './Navbar';
 import {data} from './../../data'
 
+//TODO ADD JOBS COMPONENT
+
 const ReactRouterSetup = () => {
     const [people,setPeople] = useState(data);
+    const onChangePeople = (newPeople) => {
+        setPeople(newPeople);
+    }
 
     return (
         <Router>
@@ -26,8 +34,17 @@ const ReactRouterSetup = () => {
                 <Route path="/people">
                     <People data={people} />
                 </Route>
+                <Route path="/cities">
+                    <CitiesList />
+                </Route>
+                <Route path="/jobs">
+                    <Jobs data={people} onChangePeople={onChangePeople} />
+                </Route>
+                <Route path="/job/:id">
+                    <Job data={people} onChangePeople={onChangePeople} />
+                </Route>
                 <Route path="/person/:id">
-                    <Person data={people} onChangePeople={(newPeople) => setPeople(newPeople)}/>
+                    <Person data={people} onChangePeople={onChangePeople}/>
                 </Route>
                 <Route path="*">
                     <Error />

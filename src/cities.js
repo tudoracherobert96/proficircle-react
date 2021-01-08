@@ -1,0 +1,60 @@
+export const cities = [
+    {
+        city: "Bucharest",
+        sectors: [
+            {
+                name:"1",
+                zones:
+                [
+                    "Berceni",
+                    "Titan"
+                ]       
+            },
+            {
+                name:"2",
+                zones:
+                [
+                    "Pipera",
+                    "Militari"
+                ]
+            },
+            {
+                name:"3",
+                zones:
+                [
+                    "Universitate",
+                    "Nordului"
+                ]
+            }
+        ]
+    },
+    {
+        city: "Brasov",
+        sectors: [
+            {
+                name:"Centru",
+                zones:
+                [
+                    "Piata"
+                ]    
+            },
+            {
+                name:"Nord",
+                zones:
+                [
+                    "Poiana",
+                    "Tampa"
+                ]    
+            },
+            {
+                name:"Sud",
+                zones:
+                [
+                    "Ex1",
+                    "Ex2",
+                    "Ex3"
+                ]    
+            },
+        ]
+    }
+]

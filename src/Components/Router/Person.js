@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {Link,useParams} from 'react-router-dom';
 import {data} from "../../data"
 import Modal from 'react-modal'
-//TODO lookup how to modify an external link and save it
 
 const Person = (props) => {
     const [name,setName] = useState("");

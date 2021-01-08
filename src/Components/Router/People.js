@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import {data} from '../../data'
 import {Link} from 'react-router-dom'
 
 const People = (props) => {
