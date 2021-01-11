@@ -20,7 +20,7 @@ const Navbar = () => {
                     <Link to="/jobs" className="btn">Jobs</Link>
                 </li>
                 <li onClick={() => setShowNav(false)}>
-                    <Link to="/cities" className="btn">Cities</Link>
+                    <Link to="/form" className="btn">Form</Link>
                 </li>
             </ul>
             )

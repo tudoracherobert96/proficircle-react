@@ -7,6 +7,7 @@ import People from './People';
 import Error from './Error';
 import Person from './Person';
 import Jobs from './Jobs';
+import Form from './Form';
 import Job from './Job';
 import CitiesList from './CitiesList';
 
@@ -17,6 +18,10 @@ import {data} from './../../data'
 
 const ReactRouterSetup = () => {
     const [people,setPeople] = useState(data);
+    const [messages,setMessages] = useState([]);
+    const onChangeMessages = (newMessage) => {
+        setMessages([...messages,newMessage]);
+    }
     const onChangePeople = (newPeople) => {
         setPeople(newPeople);
     }
@@ -34,8 +39,8 @@ const ReactRouterSetup = () => {
                 <Route path="/people">
                     <People data={people} />
                 </Route>
-                <Route path="/cities">
-                    <CitiesList />
+                <Route path="/form">
+                    <Form onChangeMessages={onChangeMessages}/>
                 </Route>
                 <Route path="/jobs">
                     <Jobs data={people} onChangePeople={onChangePeople} />
@@ -45,6 +50,9 @@ const ReactRouterSetup = () => {
                 </Route>
                 <Route path="/person/:id">
                     <Person data={people} onChangePeople={onChangePeople}/>
+                </Route>
+                <Route path="/:id/cities">
+                    <CitiesList data={people} onChangePeople={onChangePeople}/>
                 </Route>
                 <Route path="*">
                     <Error />
