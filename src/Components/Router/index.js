@@ -8,6 +8,7 @@ import Error from "./Error";
 import Person from "./Person";
 import Jobs from "./Jobs";
 import Form from "./Form";
+import Test from "./Test";
 import Job from "./Job";
 import CitiesList from "./CitiesList";
 import Api from "./Api";
@@ -53,11 +54,14 @@ const ReactRouterSetup = () => {
         <Route path="/api">
           <Api />
         </Route>
+        <Route path="/test">
+          <Test />
+        </Route>
         <Route path="/job/:id">
           <Job data={people} onChangePeople={onChangePeople} />
         </Route>
         <Route path="/person/:id">
-          <Person data={people} onChangePeople={onChangePeople} />
+          <Person data={people} />
         </Route>
         <Route path="/:id/cities">
           <CitiesList data={people} onChangePeople={onChangePeople} />
