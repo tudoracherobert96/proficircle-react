@@ -14,24 +14,20 @@ import CitiesList from "./CitiesList";
 import Api from "./Api";
 import BootstrapTest from "./BootstrapTest";
 
-import Navbar from "./Navbar";
+import NavbarBs from "./NavbarBs";
 import { data } from "./../../data";
 
 //TODO ADD JOBS COMPONENT
 
 const ReactRouterSetup = () => {
-  const [people, setPeople] = useState(data);
   const [messages, setMessages] = useState([]);
   const onChangeMessages = (newMessage) => {
     setMessages([...messages, newMessage]);
   };
-  const onChangePeople = (newPeople) => {
-    setPeople(newPeople);
-  };
 
   return (
     <Router>
-      <Navbar />
+      <NavbarBs />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -40,7 +36,7 @@ const ReactRouterSetup = () => {
           <About />
         </Route>
         <Route path="/people">
-          <People data={people} />
+          <People />
         </Route>
         <Route path="/form">
           <Form onChangeMessages={onChangeMessages} />
@@ -49,7 +45,7 @@ const ReactRouterSetup = () => {
           <BootstrapTest />
         </Route>
         <Route path="/jobs">
-          <Jobs data={people} onChangePeople={onChangePeople} />
+          <Jobs />
         </Route>
         <Route path="/api">
           <Api />
@@ -58,13 +54,13 @@ const ReactRouterSetup = () => {
           <Test />
         </Route>
         <Route path="/job/:id">
-          <Job data={people} onChangePeople={onChangePeople} />
+          <Job />
         </Route>
         <Route path="/person/:id">
-          <Person data={people} />
+          <Person />
         </Route>
         <Route path="/:id/cities">
-          <CitiesList data={people} onChangePeople={onChangePeople} />
+          <CitiesList />
         </Route>
         <Route path="*">
           <Error />

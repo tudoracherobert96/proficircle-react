@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
-import { data } from "../../data";
 import Modal from "react-modal";
 import { useSelector, useDispatch } from "react-redux";
-import { push, modify } from "../../Actions";
+import { modify } from "../../Actions";
 
-const Person = (props) => {
+const Person = () => {
   const data = useSelector((state) => state.people);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
@@ -14,15 +13,14 @@ const Person = (props) => {
   const history = useHistory();
 
   useEffect(() => {
-    setName(props.data[id - 1].name);
+    setName(data[id - 1].name);
   }, []);
 
   const saveName = () => {
-    const newName = document.getElementById("inputName").value;
     const newPeople = data;
-    newPeople[id - 1].name = newName;
+    newPeople[id - 1].name = document.getElementById("inputName").value;
     dispatch(modify(newPeople));
-    setName(newName);
+    setName(newPeople[id - 1].name);
     setIsModalActive(false);
   };
   const gotoNextPage = () => {

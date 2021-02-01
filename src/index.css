@@ -201,9 +201,8 @@ p {
 }
 .underlineMenu {
   width: 100%;
-  background: linear-gradient(#dcdcdc, white);
-  height: 10px;
-  margin-bottom: 30px;
+  background: linear-gradient(#000000, white);
+  height: 63px;
 }
 .header > h1:hover {
   transition: 0.8s;
@@ -309,6 +308,14 @@ p {
   text-transform: capitalize;
   border-radius: var(--radius);
   cursor: pointer;
+}
+.navBtn {
+  padding: 1px 10px 1px 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  margin: 0px 5px 0px 5px;
 }
 .nav-links {
   max-width: var(--fixed-width);

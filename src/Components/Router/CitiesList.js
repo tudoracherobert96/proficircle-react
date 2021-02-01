@@ -4,7 +4,7 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { push, modify } from "../../Actions";
 
-const CitiesList = (props) => {
+const CitiesList = () => {
   const redPeople = useSelector((state) => state.people);
   const dispatch = useDispatch();
   const [person, setPerson] = useState(null);
@@ -18,38 +18,48 @@ const CitiesList = (props) => {
   const [zones, setZones] = useState([]);
   const history = useHistory();
 
-  useEffect(async () => {
-    const selectedPerson = redPeople.filter((person) => person.id == id);
-    setPerson(selectedPerson[0]);
-    if (
-      selectedPerson[0] &&
-      selectedPerson[0].city &&
-      selectedPerson[0].sector &&
-      selectedPerson[0].zone
-    ) {
-      await setCity(selectedPerson[0].city);
-      await setSector(selectedPerson[0].sector);
-      await setZone(selectedPerson[0].zone);
-      const newSectors = cities.filter(
-        (city) => city.city == selectedPerson[0].city
-      );
-      await setSectors(newSectors[0].sectors);
-      const newZones = newSectors[0].sectors.filter(
-        (sector) => sector.name == selectedPerson[0].sector
-      );
-      await setZones(newZones[0].zones);
-      console.log(
-        selectedPerson[0].city,
-        selectedPerson[0].sector,
+  useEffect(() => {
+    (async () => {
+      const selectedPerson = redPeople.filter((person) => person.id == id);
+      await setPerson(selectedPerson[0]);
+      if (
+        selectedPerson[0] &&
+        selectedPerson[0].city &&
+        selectedPerson[0].sector &&
         selectedPerson[0].zone
-      );
-      document.getElementById(selectedPerson[0].city).classList =
-        "cities selectedBtn";
-      document.getElementById(selectedPerson[0].sector).classList =
-        "sectors selectedBtn";
-      document.getElementById(selectedPerson[0].zone).classList =
-        "zones selectedBtn";
-    }
+      ) {
+        await setCity(selectedPerson[0].city);
+        await setSector(selectedPerson[0].sector);
+        await setZone(selectedPerson[0].zone);
+        const newSectors = cities.filter(
+          (city) => city.city == selectedPerson[0].city
+        );
+        await setSectors(newSectors[0].sectors);
+        const newZones = newSectors[0].sectors.filter(
+          (sector) => sector.name == selectedPerson[0].sector
+        );
+        await setZones(newZones[0].zones);
+        console.log(
+          selectedPerson[0].city,
+          selectedPerson[0].sector,
+          selectedPerson[0].zone
+        );
+        if (
+          selectedPerson &&
+          selectedPerson[0] &&
+          selectedPerson[0].city &&
+          selectedPerson[0].sector &&
+          selectedPerson[0].zone
+        ) {
+          document.getElementById(selectedPerson[0].city).classList =
+            "cities selectedBtn";
+          document.getElementById(selectedPerson[0].sector).classList =
+            "sectors selectedBtn";
+          document.getElementById(selectedPerson[0].zone).classList =
+            "zones selectedBtn";
+        }
+      }
+    })();
   }, []);
   useEffect(() => {
     if (people && person) {
@@ -88,9 +98,13 @@ const CitiesList = (props) => {
   const savePerson = () => {
     if (city && sector && zone) {
       const newPerson = { ...person, city: city, sector: sector, zone: zone };
-      console.log(newPerson);
+      //console.log(newPerson);
       setPerson(newPerson);
-      history.goBack();
+      //history.clear();
+      setTimeout(() => {
+        history.push("/people");
+      }, 500);
+      //history.goBack();
     } else {
       window.alert("Please select the city, sector and zone!");
     }
